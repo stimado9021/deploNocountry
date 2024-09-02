@@ -4,8 +4,8 @@ import User from '../DTO/Models/Users/User.model.js';
 
 dotenv.config();
 console.log(process.env.DB_HOST)
-export const sequelize = new Sequelize(process.env.POSTGRES_DATABASE, process.env.POSTGRES_USER, process.env.POSTGRES_PASSWORD, {
-  host: process.env.POSTGRES_HOST || 'localhost',
+export const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+  host: process.env.DB_HOST || 'localhost',
   dialect: 'postgres',
   port: process.env.DB_PORT || 5432,
   dialectOptions: {
